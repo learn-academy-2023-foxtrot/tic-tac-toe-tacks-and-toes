@@ -57,11 +57,27 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 ---
 
 ### 📚 User Stories
-
+#### branch game board
 - As a user, I can see a three by three grid game board on the page.
+create component named grid and pass through App.js
+
 - As a user, I can click on a square to mark it.
+
 - As a user, my partner can click on a square after me and see their mark.
 - As a user, I can't click on a square that has already been marked.
+pseudocode: 
+function name : player
+input: true
+output: a true and false statement switching between each other to switch players and their inputs
+process:
+create another state to collect the first player(X) input. use setter to 
+take the first player who is X and then store it in a state so it can be updated to the O player. all taking place in the player variable with the useState hook
+    think battle ship mixed w tic tac toe 
+think who and where
+const [player, setPlayer] = useState(true)
+call on setPlayer to change true for ❌ and false for ⭕️
+
+
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
 - As a user, I can't play the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
