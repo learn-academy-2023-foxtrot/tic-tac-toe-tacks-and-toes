@@ -79,6 +79,31 @@ call on setPlayer to change true for ❌ and false for ⭕️
 
 
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
+
+input: 
+const calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}
+
+
+
+
 - As a user, I can't play the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.

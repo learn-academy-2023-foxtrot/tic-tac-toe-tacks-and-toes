@@ -10,6 +10,7 @@ const Square = ({squares, handleClick}) => {
              className="square" 
               key={index}
                onClick={()=> handleClick(index)}
+               
                >
               {board}
             </div>
