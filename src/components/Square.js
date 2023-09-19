@@ -11,7 +11,7 @@ const Square = ({squares, handleClick}) => {
               key={index}
                onClick={()=> handleClick(index)}
                >
-                {board}
+              {board}
             </div>
         )
       })}

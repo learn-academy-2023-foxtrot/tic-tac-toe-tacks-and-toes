@@ -4,16 +4,18 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
-  
+  const [player, setPlayer] = useState(true)
+  console.log(player)
   const handleClick = (selectedIndex) => {
-    // console.log(selectedIndex)
 
-    if(squares[selectedIndex]  === null) {
+    if(squares[selectedIndex] === null && player === true) {
         squares[selectedIndex] = "❌" 
         setSquares([...squares])
-      }else if(squares[selectedIndex] !== "❌" && setSquares("❌")) {
+        setPlayer(false)
+      }else if(squares[selectedIndex] === null && player === false){
         squares[selectedIndex] = "⭕️"
         setSquares([...squares])
+        setPlayer(true)
       }
 } 
 return (
