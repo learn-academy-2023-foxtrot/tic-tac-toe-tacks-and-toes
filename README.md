@@ -65,6 +65,13 @@ create component named grid and pass through App.js
 
 - As a user, my partner can click on a square after me and see their mark.
 
+create another state to collect the first player(X) input. use setter to 
+take the first player who is X and then store it in a state so it can be updated to the O player. all taking place in the player variable with the useState hook
+    think battle ship mixed w tic tac toe 
+think who and where
+const [player, setPlayer] = useState("❌")
+call on setPlayer to change "❌" to "⭕️" 
+
 - As a user, I can't click on a square that has already been marked.
 
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.

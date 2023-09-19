@@ -4,20 +4,20 @@ import './App.css'
 
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
+  
   const handleClick = (selectedIndex) => {
     // console.log(selectedIndex)
-    
+
     if(squares[selectedIndex]  === null) {
-      squares[selectedIndex] = "❌" 
-      setSquares([...squares])
-    }else if(squares[selectedIndex] !== "❌" && setSquares("❌")) {
-      squares[selectedIndex] = "⭕️"
-      // setSquares([...squares])
-    }
-    //if(squares[selectedIndex] !== "❌" && squares[selectedIndex] === null) 
-  } 
-  return (
-    <>
+        squares[selectedIndex] = "❌" 
+        setSquares([...squares])
+      }else if(squares[selectedIndex] !== "❌" && setSquares("❌")) {
+        squares[selectedIndex] = "⭕️"
+        setSquares([...squares])
+      }
+} 
+return (
+  <>
       <h1>Tic Tac Toe</h1>
       <Square squares={squares}
        handleClick={handleClick}
@@ -33,6 +33,14 @@ export default App
 
 
 
+// if(squares[selectedIndex]  === null) {
+//   squares[selectedIndex] = "❌" 
+//   setSquares([...squares])
+// }else if(squares[selectedIndex] !== "❌" && setSquares("❌")) {
+//   squares[selectedIndex] = "⭕️"
+//   setSquares([...squares])
+// }
+// //if(squares[selectedIndex] !== "❌" && squares[selectedIndex] === null) 
 
 
 
